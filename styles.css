@@ -1,0 +1,162 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body with animated gradient background */
+body {
+    background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #6e44ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Main container */
+main {
+    flex: 1;
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Form and sections styling */
+.input-section, .matrix-section, .result-section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* Input styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #fff;
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Table styling */
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.matrix-table th, .matrix-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.matrix-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.matrix-table td input {
+    width: 60px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+/* Result styling */
+.result-section {
+    text-align: center;
+}
+
+.result-section p {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 0.9rem;
+}
+
+/* Responsive for media tag */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+}
